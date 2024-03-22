@@ -1,5 +1,9 @@
   /* Create an accessible color palette using var()function */
   /* https://www.w3schools.com/css/css3_variables.asp */
+  :root {
+    --orange: #FFF1BF;
+    --cocoa: #553C3C;
+  }
   
   form {
     display: grid;
@@ -10,8 +14,8 @@
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #702082;
-    background: #CFC096;
+    color: var(--cocoa);
+    background: var(--orange);
     font-family: "Mukta Vaani", sans-serif;
   }
 
@@ -19,7 +23,7 @@
     grid-column-start: 1;
     grid-column-end: 3;
     /* background: #575294; */
-    color: #702082;
+    /* color: #702082; */
   }
 
   #name {
@@ -27,8 +31,8 @@
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    background: #CFC096;
-    color: #9B9A6D;
+    /* background: #CFC096;
+    color: #9B9A6D; */
   }
 
   #message {
@@ -41,13 +45,21 @@
   textarea {
     padding: 10px;
     border: 1px solid #ccc;
+    /* width: 100%; */
+  }
+
+  input[type="radio"] {
+    vertical-align: middle;
+  }
+
+  input[type="file"] {
     width: 100%;
   }
 
   input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: var(--cocoa);
     color: white;
     border: none;
     border-radius: 5px;
@@ -55,5 +67,5 @@
   }
 
   input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: black;
   }
